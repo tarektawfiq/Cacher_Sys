@@ -1,0 +1,603 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+:root {
+    --main_color: rgb(102 219 102);
+}
+::-webkit-scrollbar {
+    color: var(--main_color);
+    width: 2px;
+}
+body {
+    background-color: #444;
+    text-transform: capitalize;
+    font-family: sans-serif;
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+}
+header span {
+    font-size: 70px;
+    color: var(--main_color);
+    cursor: pointer;
+}
+.Error {
+    font-size: 22px;
+    text-align: center;
+    color: red;
+    font-weight: 600;
+    display: block;
+    scale: 0;
+    /* user-select: none; */
+    margin: 0;
+    transition: 400ms;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    gap: 200px;
+}
+.box {
+    border: 1px solid var(--main_color);
+    /* pointer-events: none; */
+    border-radius: 25px;
+    padding: 100px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.box span {
+    color: var(--main_color);
+    font-size: 120px;
+}
+.box:first-child {
+    padding: 100px 90px;
+}
+.box p  , .icon p {
+    color: var(--main_color);
+    text-decoration: none;
+    font-size: 22px;
+    text-align: center;
+    margin: 10px 0px ;
+}
+.FromBoss {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+}
+.PasswordInput {
+    border: none;
+    border-bottom: 1px solid var(--main_color);
+    outline: none;
+    background-color: transparent;
+    padding-bottom: 10px;
+}
+.PasswordInput:nth-child(2) {
+    margin-left: 10px;
+}
+.PasswordInput::placeholder {
+    color: #fff;
+    padding-left: 5px;
+}
+.BtnEnter {
+    outline: none;
+    background-color: var(--main_color);
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.ContainerBossPage {
+    padding: 50px 75px;
+}
+.HeadOfBoss {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 30px 0px;
+    color: #fff;
+}
+.AddProduct {
+    line-height: 4;
+    position: relative;
+    height: 0px;
+    transition: 0.3s;
+}
+.AddProduct input {
+    outline: none;
+    padding: 10px 10px;
+    background-color: #303030;
+    border: none;
+    box-shadow: inset 0px 0px 35px -30px var(--main_color);
+    border-radius: 10px;
+    color: #fff;
+}
+.AddProduct input::placeholder {
+    padding-left: 4px;
+    color: #fff;
+}
+.AddProduct input::selection {
+    background-color: var(--main_color);
+}
+.NameOfProduct {
+    width: 100%;
+}
+.Price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+.Price input {
+    width: calc((100% / 3));
+}
+.Category {
+    width: 100%;
+}
+.BtnAddProduct , .EditeBTN{
+    background-color: var(--main_color) !important;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+}
+.Inputs {
+    transform: scale(0);
+    opacity: 0;
+    transition: 0.3s;
+    pointer-events:none;
+}
+.Inputs.Up {
+    transform: scale(1);
+    opacity: 1;
+    pointer-events: all;
+}
+.Arrow {
+    position: absolute;
+    bottom: -30px;
+    right: 0;
+    color: var(--main_color);
+    cursor: pointer;
+    font-size: 22px;
+    transition: 0.5s;
+}
+.HeadOfProduct {
+    width: 90%;
+    margin: 30px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.HeadOfProduct span {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: var(--main_color);
+    border-radius: 10px;
+    padding: 7px 10px;
+    width: calc((100% / 8) - 10px);
+    text-align: center;
+}
+.ContainerOfProducts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 90%;
+    margin:10px auto;
+    line-height: 2;
+}
+.ContainerOfProducts span {
+    width: calc((100% / 8) - 10px);
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 400;
+}
+.ContainerOfProducts .BtnEdite , .BtnDelete , .AddCard{
+    background-color: var(--main_color);
+    border: none;
+    border-radius: 10px;
+    padding: 3px 10px !important;
+    cursor: pointer;
+    user-select: none;
+}
+.storage {
+    background-image: url(../assets/right-arrow.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 20px;
+    display: inline-block;
+    filter: invert(1);
+    cursor: pointer;
+}
+.IconBackDoor {
+    font-size: 24px;
+    color: var(--main_color);
+    padding-top: 20px;
+    padding-left: 20px;
+    cursor: pointer;
+    user-select: none;
+}
+.Options {
+    display: inline-block;
+    background-color: rgba(255,255,255,0.3);
+    scale: 0;
+    transition: 200ms;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+    margin-left: 20px;
+    user-select: none;
+}
+.Options::after {
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent rgba(255,255,255,0.3) transparent transparent;
+    position: absolute;
+    left: -20px;
+
+}
+.Options.Active {
+    scale: 1;
+}
+.ICONS {
+    color: var(--main_color);
+    font-size: 20px;
+    cursor: pointer;
+}
+.Stock {
+padding-left: 10px;
+padding-right: 5px;
+}
+.PopUp {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: #0000008f;
+    pointer-events: none;
+    opacity: 0;
+    scale: 0;
+    transition: 0.3s;
+    z-index: 999;
+}
+.PopUp.Active {
+    scale: 1;
+    opacity: 1;
+    pointer-events: all;
+} 
+.PopUpProduct {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    padding: 50px 30px;
+    background-color: var(--main_color);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    z-index: 9999999;
+}
+.UploadImage {
+    font-size: 80px;
+    padding: 30px;
+    border: 1px solid #303030;
+    cursor: pointer;
+}
+#Image {
+    display: none;
+}
+.Details {
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 1px;
+}
+.AddPhoto {
+    cursor: pointer;
+}
+.CloseIcon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 99999999;
+    font-size: 30px;
+    color: #303030;
+    cursor: pointer;
+}
+#backup {
+    font-size: 75px;
+    color: var(--main_color) !important;
+    text-decoration: none;
+}
+.ShoppingCart {
+    color: var(--main_color);
+    position: absolute;
+    right: 20px;
+    font-size: 24px;
+    top: 20px;
+    cursor: pointer;
+}
+.Reset {
+    width: 50%;
+    margin: auto;
+    margin-top: 70px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+.Reset h2 { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.spanNumber {
+    width: 150px;
+}
+.LogoOfReset {
+    background-image: url(../assets/logo192.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+}
+.QuantatyInput {
+    outline: none;
+    padding: 3px 10px;
+    background-color: #303030;
+    border: none;
+    box-shadow: inset 0px 0px 35px -30px var(--main_color);
+    border-radius: 10px;
+    color: #fff;
+}
+.HeadDetails {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* gap: 400px; */
+    margin: 10px 0px;
+}
+.ContainerOfSaleProducts {
+    display: flex;
+    align-items: center;
+    /* gap: 52px; */
+    justify-content: space-between;
+    margin: 10px 0px;
+}
+.ContainerOfSaleProducts span {
+    font-size: 18px;
+    font-weight: 500;
+    width: calc((100% / 4) - 10px);
+}
+.ContainerInReset {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 0px;
+    width: 100%;
+    position: relative;
+}
+.ContainerInReset .RemoveProduct {
+    position: absolute;
+    left: -18px;
+    width: 15px;
+    height: 15px;
+    background-color: #ff0000bd;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+}
+.ContainerInReset:hover .RemoveProduct{
+    opacity: 1;
+}
+.ContainerInReset span {
+    width: calc((100% / 4) - 10px);
+    text-align: center;
+}
+.SpanID {
+    display: block;
+    font-size: 10px;
+}
+.respnose {
+    margin: 10px 0px;
+}
+.NameSection {
+    text-align: left;
+}
+.QuantatySection {
+    text-align: center;
+}
+.PriceSection {
+    text-align: center;
+}
+.TotalSection {
+    text-align: right;
+}
+.ResetName {
+    text-align: left !important;
+}
+.NumQuantaty {
+    text-align: center !important;
+}
+.TotalPrice {
+    text-align: right !important;
+}
+.EndSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    margin: 10px 0px;
+}
+.TotalPriceSection {
+
+}
+.DiscountSection {
+    border: 1px solid #00000062;
+    border-radius: 10px;
+    padding: 4px 0PX;
+    outline: none;
+    width: 10%;
+    padding-right: 74px;
+    padding-left: 7px;
+    margin-left: 5px;
+}
+.Buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+.BTNS {
+    padding: 4px 10px;
+    background-color: #cbcbcb;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 20%;
+}
+.redDot {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+    right: -5px;
+    top: -5px;
+    scale: 0;
+    transition: 0.3s;
+}
+.IsDone {
+    font-size: 20px;
+    font-weight: 600;
+    color: rgba(255, 0, 0, 0.568);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.DeleteReset {
+    cursor: pointer;
+}
+.ContainersOfResets {
+    display: flex;
+        flex-direction: column-reverse;
+}
+.SearchContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+.CONS {
+    width: calc(50% - 5px);
+    position: relative;
+}
+.SearchCategory , .SearchType {
+    width: 100%;
+    outline: none;
+    padding: 14px 10px;
+    background-color: transparent;
+    border: none;
+    box-shadow: inset 0px 0px 35px -30px var(--main_color);
+    border-radius: 7px;
+    color: var(--main_color);
+    border: 1px solid rgb(102 219 102);
+}
+.BtnSearch {
+    background-color: var(--main_color) !important;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    padding: 10px 10px;
+    border: none;
+    box-shadow: inset 0px 0px 35px -30px var(--main_color);
+    border-radius: 7px;
+    color: #fff;
+}
+.CancelSearch {
+    border-top-right-radius: 5px;
+    position: absolute;
+    z-index: 1111;
+    right: 1px;
+    top: 1px;
+    font-size: 20px;
+    color: var(--main_color);
+    cursor: pointer;
+    opacity: 0;
+    scale: 0;
+    transition: 0.3s;
+    padding: 10px;
+    background-color: aliceblue;
+    border-bottom-right-radius: 5px;
+}
+.CancelSearch:hover {
+    opacity: 1 !important;
+    scale: 1;
+}
+.ContainerSafe {
+    width: 80%;
+    margin: auto;
+    margin-top: 100px;
+    text-align: center;
+    border-color: var(--main_color);
+}
+.ContainerSafe .RowX {
+    color: var(--main_color);
+    padding: 15px 10px;
+}
+.ContainerResponse {
+    margin: 50px auto;
+    width: 90%;
+}
+.ContainerResponse h2 {
+    text-align: center;
+    color: var(--main_color);
+}
+.ContainerStorage {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin:10px auto;
+    line-height: 2;
+}
+.ContainerStorage span{
+    width: calc((100% / 6) - 10px);
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 400;
+}
