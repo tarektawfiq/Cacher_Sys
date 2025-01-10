@@ -4,6 +4,10 @@ document.addEventListener("DOMContentLoaded", function () {
   let PopUp = document.querySelector(".PopUp");
   let UploadImage = document.querySelector(".UploadImage");
 
+  if (!sessionStorage.getItem("Bosspass")) {
+    window.location.href = "index.html";
+  }
+
 
   let num = 0;
   let array = [];

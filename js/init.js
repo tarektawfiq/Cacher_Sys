@@ -87,7 +87,7 @@ function Total(Selling, Discount) {
   return afterDiscount;
 }
 
-if (!localStorage.getItem("Bosspass") || !sessionStorage.getItem("Bosspass")) {
+if (!localStorage.getItem("Bosspass")) {
   window.location.href = "index.html";
 }
 

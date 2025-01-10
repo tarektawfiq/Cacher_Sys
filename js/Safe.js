@@ -7,6 +7,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let array = [];
 
+  if (!sessionStorage.getItem("Bosspass")) {
+    window.location.href = "index.html";
+  }
+
   localStorage.getItem("Safe")
     ? (array = JSON.parse(localStorage.getItem("Safe")))
     : (array = []);
