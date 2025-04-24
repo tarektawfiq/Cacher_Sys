@@ -2,13 +2,13 @@ self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open('v1').then((cache) =>
       cache.addAll([
-        '/Cacher_Sys/',
-        '/Cacher_Sys/index.html',
-        '/Cacher_Sys/style/style.css',
-        '/Cacher_Sys/js/main.js',
-        '/Cacher_Sys/manifest.json',
-        '/Cacher_Sys/assets/icons/icon-192.png',
-        '/Cacher_Sys/assets/icons/icon-512.png'
+        '/',
+        '/index.html',
+        '/style/style.css',
+        '/js/main.js',
+        '/manifest.json',
+        '/assets/icons/icon-192.png',
+        '/assets/icons/icon-512.png'
       ])
     )
   );
