@@ -5,7 +5,7 @@
     user-select: none;
 }
 :root {
-    --main_color: rgb(102 219 102);
+    --main_color: #c3a73f;
 }
 ::-webkit-scrollbar {
     color: var(--main_color);
