@@ -13,9 +13,9 @@
     width: 2px;
 }
 body {
-    background-color: #000;
+    background-color: #1b1b1b;
     text-transform: capitalize;
-    font-family: sans-serif;
+    font-family: fantasy;
 }
 header {
     display: flex;
@@ -87,7 +87,7 @@ header span {
     margin-left: 10px;
 }
 .PasswordInput::placeholder {
-    color: #fff;
+    color: var(--main_color);
     padding-left: 5px;
 }
 .BtnEnter {
@@ -182,12 +182,13 @@ header span {
     justify-content: space-between;
     flex-wrap: wrap;
     border-bottom: 1px solid var(--main_color);
-    padding-bottom: 12px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
 }
 .HeadOfProduct span {
     color: var(--main_color);
-    font-size: 16px;
-    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 1px;
     /* background-color: var(--main_color); */
     border-radius: 10px;
     padding: 7px 10px;
@@ -202,16 +203,17 @@ header span {
     width: 90%;
     margin:10px auto;
     line-height: 2;
+    border-bottom: 1px solid var(--main_color);
 }
 .ContainerOfProducts span {
     width: calc((100% / 8) - 10px);
     text-align: center;
-    font-size: 16px;
+    font-size: 18px;
     color: #fff;
-    font-weight: 400;
+    letter-spacing: 1px;
 }
 .ContainerOfProducts .BtnEdite , .BtnDelete , .AddCard{
-    background-color: var(--main_color);
+    /* background-color: var(--main_color); */
     border: none;
     border-radius: 10px;
     padding: 3px 10px !important;
