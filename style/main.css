@@ -6,6 +6,7 @@
 }
 :root {
     --main_color: #c3a73f;
+    /* #9d8837 */
 }
 ::-webkit-scrollbar {
     color: var(--main_color);
@@ -112,6 +113,8 @@ header span {
     position: relative;
     height: 0px;
     transition: 0.3s;
+    width: 90%;
+    margin: auto;
 }
 .AddProduct input {
     outline: none;
@@ -164,8 +167,8 @@ header span {
 }
 .Arrow {
     position: absolute;
-    bottom: -30px;
-    right: 0;
+    bottom: 0px;
+    right: -25px;
     color: var(--main_color);
     cursor: pointer;
     font-size: 22px;
@@ -178,12 +181,14 @@ header span {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    border-bottom: 1px solid var(--main_color);
+    padding-bottom: 12px;
 }
 .HeadOfProduct span {
-    color: #fff;
+    color: var(--main_color);
     font-size: 16px;
     font-weight: 400;
-    background-color: var(--main_color);
+    /* background-color: var(--main_color); */
     border-radius: 10px;
     padding: 7px 10px;
     width: calc((100% / 8) - 10px);
@@ -532,7 +537,7 @@ padding-right: 5px;
     box-shadow: inset 0px 0px 35px -30px var(--main_color);
     border-radius: 7px;
     color: var(--main_color);
-    border: 1px solid rgb(102 219 102);
+    border: 1px solid #c3a73f;
 }
 .BtnSearch {
     background-color: var(--main_color) !important;
