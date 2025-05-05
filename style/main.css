@@ -82,6 +82,7 @@ header span {
     outline: none;
     background-color: transparent;
     padding-bottom: 10px;
+    color: var(--main_color);
 }
 .PasswordInput:nth-child(2) {
     margin-left: 10px;
@@ -89,6 +90,8 @@ header span {
 .PasswordInput::placeholder {
     color: var(--main_color);
     padding-left: 5px;
+    font-family: fantasy;
+    letter-spacing: 1px;
 }
 .BtnEnter {
     outline: none;
@@ -106,7 +109,8 @@ header span {
     font-size: 24px;
     font-weight: 700;
     margin: 30px 0px;
-    color: #fff;
+    color: var(--main_color);
+    letter-spacing: 1px;
 }
 .AddProduct {
     line-height: 4;
@@ -118,19 +122,24 @@ header span {
 }
 .AddProduct input {
     outline: none;
-    padding: 10px 10px;
-    background-color: #303030;
+    padding: 14px 10px;
+    background-color: #303030a6;
     border: none;
     box-shadow: inset 0px 0px 35px -30px var(--main_color);
     border-radius: 10px;
-    color: #fff;
+    color: var(--main_color);
+    font-size: 18px;
 }
 .AddProduct input::placeholder {
     padding-left: 4px;
-    color: #fff;
+    color: var(--main_color);
+    font-family: fantasy;
+    letter-spacing: 1px;
+    font-size: 16px;
 }
 .AddProduct input::selection {
     background-color: var(--main_color);
+    color: #fff;
 }
 .NameOfProduct {
     width: 100%;
@@ -139,10 +148,10 @@ header span {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 50px;
+    gap: 15px;
 }
 .Price input {
-    width: calc((100% / 3));
+    width: calc((100% / 2));
 }
 .Category {
     width: 100%;
@@ -209,7 +218,7 @@ header span {
     width: calc((100% / 8) - 10px);
     text-align: center;
     font-size: 18px;
-    color: #fff;
+    color: var(--main_color);
     letter-spacing: 1px;
 }
 .ContainerOfProducts .BtnEdite , .BtnDelete , .AddCard{
@@ -533,7 +542,7 @@ padding-right: 5px;
 .SearchCategory , .SearchType {
     width: 100%;
     outline: none;
-    padding: 14px 10px;
+    padding: 16px 10px;
     background-color: transparent;
     border: none;
     box-shadow: inset 0px 0px 35px -30px var(--main_color);
@@ -541,18 +550,28 @@ padding-right: 5px;
     color: var(--main_color);
     border: 1px solid #c3a73f;
 }
+.SearchCategory::placeholder , .SearchType::placeholder {
+    padding-left: 4px;
+    color: var(--main_color);
+    font-family: fantasy;
+    letter-spacing: 1px;
+    font-size: 14px;
+}
 .BtnSearch {
-    background-color: var(--main_color) !important;
-    color: #fff;
+    background-color: #2d2d2da8;
+    color: var(--main_color);
     width: 100%;
     text-align: center;
     cursor: pointer;
     outline: none;
     padding: 10px 10px;
     border: none;
-    box-shadow: inset 0px 0px 35px -30px var(--main_color);
+    /* box-shadow: inset 0px 0px 35px -30px var(--main_color); */
     border-radius: 7px;
-    color: #fff;
+    /* color: #fff; */
+    font-family: fantasy;
+    letter-spacing: 1px;
+    font-size: 18px;
 }
 .CancelSearch {
     border-top-right-radius: 5px;
@@ -607,4 +626,31 @@ padding-right: 5px;
     font-size: 16px;
     color: #fff;
     font-weight: 400;
+}
+.BtnAddProduct, .EditeBTN {
+    font-family: fantasy;
+    letter-spacing: 1px;
+    background-color: #2d2d2da8 !important; 
+    color: var(--main_color);
+    width: 20%;
+}
+.Last__Line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* margin: 10px 0px; */
+    gap: 20px;
+    font-size: 18px;
+}
+.LoopProducts {
+    width: 100%;
+}
+.Logo {
+    color: var(--main_color);
+    font-size: 30px;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    letter-spacing: 1px;
 }

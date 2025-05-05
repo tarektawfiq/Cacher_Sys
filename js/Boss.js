@@ -163,16 +163,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
           edit.setAttribute("quantaty", e.number);
 
-          edit.classList = "BtnEdite";
+          edit.classList = "BtnEdite fas fa-edit";
           edit.setAttribute("where", entafen);
 
-          edit.textContent = "Edite";
+          // edit.textContent = "Edite";
 
           let delet = document.createElement("span");
 
-          delet.classList = "BtnDelete";
+          delet.classList = "BtnDelete fas fa-trash-alt";
 
-          delet.textContent = "Delete";
+          // delet.textContent = "Delete";
 
           let storage = document.createElement("span");
 
