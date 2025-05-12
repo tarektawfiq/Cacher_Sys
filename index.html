@@ -1,56 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#2196f3">
-    <link rel="stylesheet" href="./style/main.css">
-    <link rel="stylesheet" href="./style/all.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#2196f3" />
+    <link rel="stylesheet" href="./style/main.css" />
+    <link rel="stylesheet" href="./style/all.min.css" />
     <title>7mada</title>
-</head>
-<body>
-    
+  </head>
+  <body>
     <header>
-        <div class="icon">
-            <a href="" id="backup" class="backup fas fa-database"></a>
-            <p>backUp</p>
-        </div>
-        <div class="icon">
-            <span class="colse fas fa-sign-out"></span>
-            <p>Esc</p>
-        </div>
+      <div class="icon">
+        <a href="" id="backup" class="backup fas fa-database"></a>
+        <p>backUp</p>
+      </div>
+      <div class="icon">
+        <span class="colse fas fa-sign-out"></span>
+        <p>Esc</p>
+      </div>
     </header>
 
     <section>
-        <p class="Error"></p>
-        <div class="container">
-            <span href="Boss.html" class="box Boss">
-                <!-- <img src="./assets/Closed.png" alt="" srcset=""> -->
-                 <span class="fas fa-user-lock"></span>
-                 <p>boss</p>
-            </span>
-            <span href="Cacher.html" class="box Cacher">
-                <!-- <img src="./assets/User3.png" alt="" srcset=""> -->
-                 <span class="fas fa-user-tie"></span>
-                 <p>cacher</p>
-            </span>
-        </div>
+      <p class="Error"></p>
+      <div class="container">
+        <span href="Boss.html" class="box Boss">
+          <!-- <img src="./assets/Closed.png" alt="" srcset=""> -->
+          <span class="fas fa-user-lock"></span>
+          <p>boss</p>
+        </span>
+        <span href="Cacher.html" class="box Cacher">
+          <!-- <img src="./assets/User3.png" alt="" srcset=""> -->
+          <span class="fas fa-user-tie"></span>
+          <p>cacher</p>
+        </span>
+      </div>
     </section>
     <form action="" class="FromBoss">
-        <input type="password" class="BossInput PasswordInput" placeholder="password">
-        <input type="password" class="ConfirmPass PasswordInput" placeholder="Confirm password">
-        <input type="submit" value="Enter" class="BtnEnter">
+      <input
+        type="password"
+        class="BossInput PasswordInput"
+        placeholder="password"
+      />
+      <input
+        type="password"
+        class="ConfirmPass PasswordInput"
+        placeholder="Confirm password"
+      />
+      <input type="submit" value="Enter" class="BtnEnter" />
     </form>
     <!-- <script src="./js/init.js"></script> -->
     <script src="./js/main.js"></script>
     <script src="./service-worker.js"></script>
     <script>
-        if ('serviceWorker' in navigator) {
-          navigator.serviceWorker.register('service-worker.js')
-            .then(reg => console.log('Service Worker registered:', reg.scope))
-            .catch(err => console.error('Service Worker error:', err));
-        }
-      </script>
-</body>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("service-worker.js")
+          .then((reg) => console.log("Service Worker registered:", reg.scope))
+          .catch((err) => console.error("Service Worker error:", err));
+      }
+    </script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-07EY2EP2ZN"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-07EY2EP2ZN");
+    </script>
+  </body>
 </html>
